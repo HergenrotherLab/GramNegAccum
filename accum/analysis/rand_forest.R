@@ -3,7 +3,7 @@ library(pROC)
 library(ggplot2)
 library(GGally)
 
-raw <- read.delim("../data/ensemble_gen/merged_data.csv", sep=",")
+raw <- read.delim("../data/merged_data.csv", sep=",")
 
 Class <- raw[,6]
 Props <- raw[8:304]
@@ -66,13 +66,13 @@ rfRoc <- roc(response = rfFit$pred$obs,
 ### Create plots ###
 
 ## Plot tuning ##
-pdf("figs/tuningPlot.pdf",
+pdf("../figs/tuningPlot.pdf",
     width=6, height=6)
 plot(rfFit)
 dev.off()
 
 ## Plot ROC curve ##
-pdf("figs/rocPlot.pdf",
+pdf("../figs/rocPlot.pdf",
     width=6, height=6)
 plot(rfRoc, type = "s", print.thres = c(.5),
      print.thres.pch = 3, legacy.axes = TRUE, print.thres.pattern = "",
@@ -82,13 +82,13 @@ plot(rfRoc, type = "s", print.thres = c(.5),
 dev.off()
 
 ## Plot variable importance ##
-pdf("figs/varImpPlot.pdf",
+pdf("../figs/varImpPlot.pdf",
     width=6, height=6)
 dotchart(rfImp.final)
 dev.off()
 
 ## Plot important variable interaction ##
-pdf("figs/varImpMatrix.pdf",
+pdf("../figs/varImpMatrix.pdf",
     width = 6, height = 6)
 ggpairs(training, mapping = aes(color = Class), columns = rfImp.names,
         upper = list(

@@ -4,7 +4,7 @@ library(caret)
 library(pROC)
 library(RColorBrewer)
 
-raw <- read.delim("../data/ensemble_gen/merged_data.csv", sep=",")
+raw <- read.delim("../data/merged_data.csv", sep=",")
 
 Class <- raw[,6]
 Props <- raw[8:304]
@@ -68,7 +68,7 @@ RepCVctrl <- trainControl(method = "repeatedcv",
 mtryValues <- c(2, 4, 6, 8, 10, 20)
 
 ## Ensure reproducibility
-set.seed(12)
+set.seed(10)
 
 ## Train random forest model
 CV2rfFit <- train(x = training[,reducedSet],
@@ -81,7 +81,7 @@ CV2rfFit <- train(x = training[,reducedSet],
                trControl = CV2ctrl)
 
 ## 5-fold CV
-set.seed(12)
+set.seed(10)
 CV5rfFit <- train(x = training[,reducedSet],
                y = training$Class,
                method = "rf",
@@ -92,7 +92,7 @@ CV5rfFit <- train(x = training[,reducedSet],
                trControl = CV5ctrl)
 
 ## 10-fold CV
-set.seed(12)
+set.seed(10)
 CV10rfFit <- train(x = training[,reducedSet],
                y = training$Class,
                method = "rf",
@@ -103,7 +103,7 @@ CV10rfFit <- train(x = training[,reducedSet],
                trControl = CV10ctrl)
 
 ## LOOCV
-set.seed(12)
+set.seed(10)
 LOOCVrfFit <- train(x = training[,reducedSet],
                y = training$Class,
                method = "rf",
@@ -114,7 +114,7 @@ LOOCVrfFit <- train(x = training[,reducedSet],
                trControl = LOOCVctrl)
 
 ## Repeated CV
-set.seed(12)
+set.seed(10)
 RepCVrfFit <- train(x = training[,reducedSet],
                y = training$Class,
                method = "rf",
@@ -145,7 +145,7 @@ RepCVrfRoc <- roc(response = RepCVrfFit$pred$obs,
 # plot
 pal <- brewer.pal(5, "Set1")
 
-pdf("figs/compareCV.pdf",
+pdf("../figs/compareCV.pdf",
     width=6, height=6)
 plot(CV2rfRoc, type = "s", add = FALSE, print.thres = c(.5),
      print.thres.pch = 3, legacy.axes = TRUE, print.thres.pattern = "",

@@ -5,7 +5,7 @@ library(corrplot)
 library(ggplot2)
 
 source("GroupVariance.R")
-raw <- read.delim("../data/ensemble_gen/merged_data.csv", sep=",")
+raw <- read.delim("../data/merged_data.csv", sep=",")
 
 Class <- raw[,6]
 Accum <- raw[,4]
@@ -57,21 +57,21 @@ fullcorMat <- cor(class.training[,fullSet])
 reducedcorMat <- cor(class.training[,reducedSet])
 
 # Plot results
-png(filename = "figs/corrplot_reducedset.png",
+png(filename = "../figs/corrplot_reducedset.png",
     width=6, height=6,
     units = "in",
     res = 600)
 corrplot(reducedcorMat, order="hclust", method="color", tl.pos="n", cl.pos="b")
 dev.off()
 
-png(filename = "figs/corrplot_fullset.png",
+png(filename = "../figs/corrplot_fullset.png",
     width=6, height=6,
     units = "in",
     res = 600)
 corrplot(fullcorMat, order="hclust", method="color", tl.pos="n", cl.pos="b")
 dev.off()
 
-png(filename = "figs/sepplot_fullset.png",
+png(filename = "../figs/sepplot_fullset.png",
     width=6, height=6,
     units = "in",
     res = 600)
@@ -81,7 +81,7 @@ dotchart(fullSet.stat.ordered$sep[1:20],labels=row.names(fullSet.stat.ordered)[1
          xlab="Separation")
 dev.off()
 
-png(filename = "figs/sepplot_reducedset.png",
+png(filename = "../figs/sepplot_reducedset.png",
     width=6, height=6,
     units = "in",
     res = 600)

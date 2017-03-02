@@ -6,8 +6,7 @@
 
 library(caret)
 
-setwd("/Volumes/data/gram_neg/analysis")
-raw <- read.delim("../data/ensemble_gen/table4_amines_ensemble.reduced.txt", sep=",")
+raw <- read.delim("../data/merged_data.csv", sep=",")
 accum <- raw[,4]
 Props <- raw[9:326]
 training <- cbind(accum, Props)
