@@ -13,7 +13,8 @@
 tmp/*
 
 # Properties #
-data/properties_calculated.xlsx
+accum/data/properties_calculated.xlsx
+accum/analysis/accumcorr.csv
 
 ### R ###
 # History files
