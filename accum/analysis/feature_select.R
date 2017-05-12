@@ -5,7 +5,7 @@ library(corrplot)
 library(ggplot2)
 
 source("GroupVariance.R")
-raw <- read.delim("../data/merged_data.csv", sep=",")
+raw <- read.delim("../data/table4.csv", sep=",")
 
 Class <- raw[,6]
 Accum <- raw[,4]

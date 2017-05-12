@@ -6,7 +6,7 @@
 
 library(caret)
 
-raw <- read.delim("../data/merged_data.csv", sep=",")
+raw <- read.delim("../data/table4.csv", sep=",")
 accum <- raw[,4]
 Props <- raw[9:326]
 training <- cbind(accum, Props)

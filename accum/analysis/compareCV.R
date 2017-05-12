@@ -4,7 +4,7 @@ library(caret)
 library(pROC)
 library(RColorBrewer)
 
-raw <- read.delim("../data/merged_data.csv", sep=",")
+raw <- read.delim("../data/table4.csv", sep=",")
 
 Class <- raw[,6]
 Props <- raw[8:304]

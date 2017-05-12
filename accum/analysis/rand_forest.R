@@ -3,7 +3,7 @@ library(pROC)
 library(ggplot2)
 library(GGally)
 
-raw <- read.delim("../data/merged_data.csv", sep=",")
+raw <- read.delim("../data/table4.csv", sep=",")
 
 Class <- raw[,6]
 Props <- raw[8:304]
@@ -94,14 +94,14 @@ ggpairs(training, mapping = aes(color = Class), columns = rfImp.names,
         upper = list(
           continuous = wrap("cor", size = 4, alignPercent = 1)
         ),
-        lower = list(continuous = wrap("points", size = 0.6)), 
+        lower = list(continuous = wrap("points", size = 0.6)),
         diag = list(continuous = "densityDiag"),
-        axisLabels = "show", 
+        axisLabels = "show",
         title = "Top 5 Important Variables from Random Forest") +
-  theme_linedraw(base_size = 8) + 
-  theme(plot.title = element_text(size = 10), 
-        axis.title = element_text(size = 10), 
-        axis.text = element_text(size = 8), 
+  theme_linedraw(base_size = 8) +
+  theme(plot.title = element_text(size = 10),
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 8),
         legend.position = "top",
-        legend.title = element_blank()) 
+        legend.title = element_blank())
 dev.off()
