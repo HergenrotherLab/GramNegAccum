@@ -46,11 +46,7 @@ def run():
     for row in pt.selected_rows:
         st = row.getStructure()
 
-<<<<<<< HEAD
         score = calculatePBF(st)
-=======
-		score = calculatePBF(st)
->>>>>>> 21c457e9f5eab8f91cb8e7cde9f424594080782e
 
         row[PBF_PROPERTY] = score
 
@@ -61,24 +57,6 @@ def run():
 
 ###############################################################################
 def calculatePBF(st):
-<<<<<<< HEAD
-    """
-    Uses SVD to fit atoms in molecule to a plane then calculates the average distance to
-    that plane.
-
-    Args:
-        st: Schrodinger structure object
-    Returns:
-        pbf: average distance of all atoms to the best fit plane
-        c: centroid vector
-        n: normal vector
-    """
-    points = getAtomCoords(st)
-    c, n = svd_fit(points)
-    pbf = 12
-    pbf = calcAvgDist(points, c, n)
-    return pbf
-=======
 	"""
 	Uses SVD to fit atoms in molecule to a plane then calculates the average distance to
 	that plane.
@@ -95,7 +73,6 @@ def calculatePBF(st):
 	pbf = 12
 	pbf = calcAvgDist(points, c, n)
 	return pbf
->>>>>>> 21c457e9f5eab8f91cb8e7cde9f424594080782e
 
 def calcAvgDist(points, C, N):
     """
@@ -203,10 +180,5 @@ if __name__ == '__main__':
 
     cmd_args = parse_args()
 
-<<<<<<< HEAD
     for st in structure.StructureReader(cmd_args.infile):
-        print st.title, 'PBF', calculatePBF(st);
-=======
-	for st in structure.StructureReader(cmd_args.infile,format='sd'):
-		print st.title, 'PBF', calculatePBF(st)
->>>>>>> 21c457e9f5eab8f91cb8e7cde9f424594080782e
+        print st.title, 'PBF', calculatePBF(st)
