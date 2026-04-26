@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "GramNegAccum: Data analysis and prediction of small-molecule accumulation in Gram-negative bacteria"
+authors:
+  - given-names: Michelle F.
+    family-names: Richter
+    affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    orcid: "https://orcid.org/0000-0002-6113-6820"
+  - given-names: Bryon S.
+    family-names: Drown
+    affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    orcid: "https://orcid.org/0000-0002-5631-512X"
+  - given-names: Paul J.
+    family-names: Hergenrother
+    affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    orcid: "https://orcid.org/0000-0001-9018-3581"
+preferred-citation:
+  type: article
+  title: "Predictive compound accumulation rules yield a broad-spectrum antibiotic"
+  authors:
+    - given-names: Michelle F.
+      family-names: Richter
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    - given-names: Bryon S.
+      family-names: Drown
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    - given-names: Andrew P.
+      family-names: Riley
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    - given-names: Alfredo
+      family-names: Garcia
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    - given-names: Tomohiro
+      family-names: Shirai
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    - given-names: Riley L.
+      family-names: Svec
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+    - given-names: Paul J.
+      family-names: Hergenrother
+      affiliation: "Department of Chemistry and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA"
+  journal: Nature
+  volume: 545
+  issue: 7654
+  start: 299
+  end: 304
+  year: 2017
+  doi: 10.1038/nature22308
+  pmid: 28489819
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19798858
+    description: "Zenodo archive of the GramNegAccum software"

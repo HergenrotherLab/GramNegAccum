@@ -1,4 +1,6 @@
 # GramNegAccum
+[![DOI](https://zenodo.org/badge/73960665.svg)](https://doi.org/10.5281/zenodo.19798858)
+
 Data analysis and prediction of small-molecule accumulation in Gram-negative bacteria published as:
 
 [__Predictive Compound Accumulation Rules Yield a Broad-Spectrum Antibiotic__](http://dx.doi.org/10.1038/nature22308).
